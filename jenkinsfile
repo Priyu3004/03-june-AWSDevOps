@@ -22,6 +22,7 @@ pipeline {
                 echo "Hello ${params.PERSON}"
                 sh'''
                 touch 11.txt
+                pwd
                 '''
                 echo "Biography: ${params.BIOGRAPHY}"
 
