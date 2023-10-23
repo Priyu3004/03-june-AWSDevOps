@@ -26,11 +26,8 @@ pipeline {
                 '''
                 echo "Biography: ${params.BIOGRAPHY}"
                 echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"
-
-                echo "Toggle: ${params.TOGGLE}"
-
+                echo "Toggle: ${params.TOGGLE}" 
                 echo "Choice: ${params.CHOICE}"
-
                 echo "Password: ${params.PASSWORD}"
             }
         }
