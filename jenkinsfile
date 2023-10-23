@@ -21,16 +21,18 @@ pipeline {
             steps {
                 echo "Hello ${params.PERSON}"
                  sh'''
-                 touch 11.txt
-                 pwd
-                 '''
+                  touch 11.txt
+                  pwd
+                  '''
                 echo "Biography: ${params.BIOGRAPHY}"
-                echo "Your jenkins is -> ${JENKINS_HOME}"
-                echo "Toggle: ${params.TOGGLE}" 
+                echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"
+
+                echo "Toggle: ${params.TOGGLE}"
+
                 echo "Choice: ${params.CHOICE}"
+
                 echo "Password: ${params.PASSWORD}"
             }
         }
     }
 }
-
