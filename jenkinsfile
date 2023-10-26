@@ -19,12 +19,11 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                git clone https://github.com/Priyu3004/03-june-AWSDevOps.git
                 echo "Hello ${params.PERSON}"
-	         sh'''
+	    sh'''
 		  touch 11.txt
 		  pwd
-		  '''
+	    '''
                 echo "Biography: ${params.BIOGRAPHY}"
 	        echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"
 
