@@ -1,4 +1,3 @@
-
 pipeline {
     agent {
     node {
@@ -21,13 +20,12 @@ pipeline {
         stage('Example') {
             steps {
                 echo "Hello ${params.PERSON}"
-				sh'''
-				touch 11.txt
-				pwd
-				'''
-
+	         sh'''
+		  touch 11.txt
+		  pwd
+		  '''
                 echo "Biography: ${params.BIOGRAPHY}"
-				echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"
+	        echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"
 
                 echo "Toggle: ${params.TOGGLE}"
 
